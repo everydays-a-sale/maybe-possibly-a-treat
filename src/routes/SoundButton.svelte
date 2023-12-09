@@ -1,11 +1,12 @@
 <script>
+    import { base } from '$app/paths';
     function playAudio() {
         const audio = new Audio();
         audio.src = "https://freesound.org/data/previews/536/536420_4921277-lq.mp3";
         audio.play();
     }
 
-    let currentImage="/sveltekit-github-pages/images/millie-1.png";
+    let currentImage=`${base}/images/millie-1.png`;
     let maxImageIndex = 3;
     let minImageIndex = 1;
     let currentImageIndex = 1;
@@ -20,7 +21,7 @@
             randomIndex = getRandomIndex();
         }
         currentImageIndex = randomIndex;
-        currentImage = `/sveltekit-github-pages/images/millie-${randomIndex}.png`
+        currentImage = `${base}/images/millie-${randomIndex}.png`
     }
 
     function handleButton() {
