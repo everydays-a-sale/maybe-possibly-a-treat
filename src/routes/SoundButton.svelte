@@ -5,7 +5,7 @@
         audio.play();
     }
 
-    let currentImage="/images/millie-1.png";
+    let currentImage="/sveltekit-github-pages/images/millie-1.png";
     let maxImageIndex = 3;
     let minImageIndex = 1;
     let currentImageIndex = 1;
@@ -20,7 +20,7 @@
             randomIndex = getRandomIndex();
         }
         currentImageIndex = randomIndex;
-        currentImage = `/images/millie-${randomIndex}.png`
+        currentImage = `/sveltekit-github-pages/images/millie-${randomIndex}.png`
     }
 
     function handleButton() {
