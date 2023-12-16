@@ -1,24 +1,36 @@
 <script>
     import { base } from '$app/paths';
-    function playAudio() {
-        const audio = new Audio();
-        audio.src = "https://freesound.org/data/previews/536/536420_4921277-lq.mp3";
-        audio.play();
-    }
+    let sounds = ['clap', 'gj', 'woo', 'woof', 'yay', 'youdidit']
+    let soundFileType = '.wav'
 
     let currentImage=`${base}/images/millie-1.png`;
+
+    let maxSoundIndex = sounds.length - 1
+    let minSoundIndex = 0;
+    let currentSoundIndex = -1;
+
     let maxImageIndex = 3;
     let minImageIndex = 1;
     let currentImageIndex = 1;
 
-    function getRandomIndex() {
-        return  Math.floor(Math.random() * (maxImageIndex - minImageIndex + 1)) + minImageIndex;
+    function getRandomIndex(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function playAudio() {
+        const audio = new Audio();
+        let randomIndex = getRandomIndex(minSoundIndex, maxSoundIndex);
+        while (randomIndex === currentSoundIndex) {
+            randomIndex = getRandomIndex(minSoundIndex, maxSoundIndex);
+        }
+        audio.src = `${base}/sounds/${sounds[randomIndex]}${soundFileType}`;
+        audio.play();
     }
 
     function changeImage() {
-        let randomIndex = getRandomIndex();
+        let randomIndex = getRandomIndex(minImageIndex, maxImageIndex);
         while (randomIndex === currentImageIndex) {
-            randomIndex = getRandomIndex();
+            randomIndex = getRandomIndex(minImageIndex, maxImageIndex);
         }
         currentImageIndex = randomIndex;
         currentImage = `${base}/images/millie-${randomIndex}.png`
@@ -51,6 +63,11 @@
         height: 150px;
         border-radius: 50%;
         object-fit: cover;
-        border:2px solid red;
+        border:2px solid rgba(216, 244, 247, 0.397);
+    }
+
+    .circular-img:hover{
+        border:2px solid #76dff1;
+        box-shadow: 0 0 50px 5px #76dff1;
     }
 </style>
