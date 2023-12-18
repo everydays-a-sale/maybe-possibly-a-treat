@@ -1,19 +1,19 @@
 <script>
     import { base } from '$app/paths';
-    let sounds = ['clap', 'gj', 'woo', 'woof', 'yay', 'youdidit']
-    let images = ['click', 'milliehat', 'dawg', 'rabbit', 'rats']
+    let sounds = ['clap', 'gj', 'woo', 'woof', 'yay', 'youdidit'];
+    let images = ['click', 'milliehat', 'dawg', 'rabbit', 'rats'];
 
-    let soundFileType = '.wav'
-    let imageFileType = '.png'
+    let soundFileType = '.wav';
+    let imageFileType = '.png';
 
     let currentImage=`${base}/images/${images[0]}${imageFileType}`;
 
 
-    let maxSoundIndex = sounds.length - 1
+    let maxSoundIndex = sounds.length - 1;
     let minSoundIndex = 0;
     let currentSoundIndex = -1;
 
-    let maxImageIndex = 3;
+    let maxImageIndex = images.length - 1;
     let minImageIndex = 1;
     let currentImageIndex = 1;
 

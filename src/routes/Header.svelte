@@ -1,5 +1,5 @@
 <script>
-    let marqueeText = "&nbsp; this is, maybe, possibly, a treat. it is intentionally difficult to read this, so I hope you can view this without spending too much time. this is just filler text to make you waste more time, but I'll probably fill this out a bit more later, just to waste more time!"
+    let marqueeText = "this is, maybe, possibly, a treat. it is intentionally difficult to read this, so I hope you can view this without spending too much time! I can't really sing to replicate your treat, so I did something I kinda know how to do - make a stupid and annoying website. I've said it before, but I really respect your dedication to school and studying (AND still trying to moderate the subreddit), especially when I compare to myself. ^_^ I hope you have a really good break, because you deserve it! I also hope this stupid little treat made you a bit happy after the usual painful exam season! "
 </script>
 
 <header>
@@ -32,7 +32,7 @@
 
     .marquee {
         display: inline-block;
-        animation: marquee 12s linear infinite;
+        animation: marquee 14s linear infinite;
     }
 
     .marquee-text {
