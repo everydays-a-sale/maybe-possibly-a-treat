@@ -1,6 +1,7 @@
 <script>
 	import Header from './Header.svelte';
 	import './styles.css';
+	import { base } from '$app/paths';
 
 	let toggle = false;
 </script>
@@ -13,7 +14,7 @@
 	</main>
 
 	<footer>
-		<a href="/" class="hint" on:click={() => (toggle = !toggle)}>
+		<a href={base} class="hint" on:click={() => (toggle = !toggle)}>
 			nothing to see here :) or maybe if you click this it'll be easier to read the scrolling header
 		</a>
 		{#if toggle}
