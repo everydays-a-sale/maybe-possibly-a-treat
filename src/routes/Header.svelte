@@ -1,20 +1,16 @@
+<script>
+    let marqueeText = "&nbsp; this is, maybe, possibly, a treat. it is intentionally difficult to read this, so I hope you can view this without spending too much time. this is just filler text to make you waste more time, but I'll probably fill this out a bit more later, just to waste more time!"
+</script>
+
 <header>
     <nav>
         <div class="marquee-container">
             <div class="marquee">
                 <span class="marquee-text">
-                    &nbsp; this is, maybe, possibly, a treat. it is
-                    intentionally difficult to read this, so I hope you can view
-                    this without spending too much time. this is just filler
-                    text to make you waste more time, but I'll probably fill
-                    this out a bit more later, just to waste more time!
+                    {marqueeText}
                 </span>
                 <span class="marquee-text">
-                    &nbsp; this is, maybe, possibly, a treat. it is
-                    intentionally difficult to read this, so I hope you can view
-                    this without spending too much time. this is just filler
-                    text to make you waste more time, but I'll probably fill
-                    this out a bit more later, just to waste more time!
+                    {marqueeText}
                 </span>
             </div>
         </div>

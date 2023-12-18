@@ -1,9 +1,13 @@
 <script>
     import { base } from '$app/paths';
     let sounds = ['clap', 'gj', 'woo', 'woof', 'yay', 'youdidit']
-    let soundFileType = '.wav'
+    let images = ['click', 'milliehat', 'dawg', 'rabbit', 'rats']
 
-    let currentImage=`${base}/images/millie-1.png`;
+    let soundFileType = '.wav'
+    let imageFileType = '.png'
+
+    let currentImage=`${base}/images/${images[0]}${imageFileType}`;
+
 
     let maxSoundIndex = sounds.length - 1
     let minSoundIndex = 0;
@@ -23,6 +27,7 @@
         while (randomIndex === currentSoundIndex) {
             randomIndex = getRandomIndex(minSoundIndex, maxSoundIndex);
         }
+        currentSoundIndex = randomIndex;
         audio.src = `${base}/sounds/${sounds[randomIndex]}${soundFileType}`;
         audio.play();
     }
@@ -33,7 +38,7 @@
             randomIndex = getRandomIndex(minImageIndex, maxImageIndex);
         }
         currentImageIndex = randomIndex;
-        currentImage = `${base}/images/millie-${randomIndex}.png`
+        currentImage = `${base}/images/${images[randomIndex]}${imageFileType}`
     }
 
     function handleButton() {

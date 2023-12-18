@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>nothing to see here :)</p>
+		<p>nothing to see here <a href> :) </a> or maybe if you click something</p>
 	</footer>
 </div>
 
